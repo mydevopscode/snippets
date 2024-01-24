@@ -56,7 +56,7 @@ while ($true) {
 $settings = @{
     "environmentId" = $environmentId
     "apiUrl"        = $apiUrl
-    "apiToken"      = $apiToken
+    "apiToken"      = "A4CY73KHGBHRKO7GAH7YTSBD66353HPL4RTEV"
     "sslMode"       = $sslMode
 }
 Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $credentials)} -Method 'PUT' -ContentType "application/json" -Uri ("{0}/dynatrace/api/settings" -f $scmUrl) -Body ($settings | ConvertTo-Json)
